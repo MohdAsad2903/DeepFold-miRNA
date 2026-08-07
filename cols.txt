@@ -1,0 +1,1 @@
+['chr', 'position', 'ref', 'alt', 'variation_id', 'pre_mirna', 'source', 'region', 'mature_mirna', 'g', 'label', 'class', 'chrom', 'mirna_id', 'strand', 'rel_pos', 'Sample_ID', 'Seq_Healthy', 'Seq_Mutant']
