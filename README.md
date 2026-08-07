@@ -1,31 +1,32 @@
 # DeepFold: Advanced miRNA SNP Pathogenicity Diagnostic Suite
 
-![DeepFold Banner](https://img.shields.io/badge/Model-5--Architecture_Stacked_Ensemble-cyan?style=for-the-badge&logo=pytorch)
-![AUC Score](https://img.shields.io/badge/Ensemble_AUC-0.7338-emerald?style=for-the-badge)
-![ClinVar Validation](https://img.shields.io/badge/ClinVar_AUC-0.81-blueviolet?style=for-the-badge)
-![Backend](https://img.shields.io/badge/Backend-FastAPI-009688?style=for-the-badge&logo=fastapi)
-![Frontend](https://img.shields.io/badge/Frontend-Next.js_14-000000?style=for-the-badge&logo=next.js)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-MohdAsad2903%2FDeepFold--miRNA-181717?style=for-the-badge&logo=github)](https://github.com/MohdAsad2903/DeepFold-miRNA)
+[![Model Architecture](https://img.shields.io/badge/Model-5--Architecture_Stacked_Ensemble-cyan?style=for-the-badge&logo=pytorch)](https://github.com/MohdAsad2903/DeepFold-miRNA#multi-modal-ensemble-architecture)
+[![Ensemble AUC](https://img.shields.io/badge/Ensemble_AUC-0.7338-emerald?style=for-the-badge)](https://github.com/MohdAsad2903/DeepFold-miRNA#scientific-performance--benchmarks)
+[![ClinVar AUC](https://img.shields.io/badge/ClinVar_AUC-0.81-blueviolet?style=for-the-badge)](https://github.com/MohdAsad2903/DeepFold-miRNA#scientific-performance--benchmarks)
+[![FastAPI Backend](https://img.shields.io/badge/Backend-FastAPI-009688?style=for-the-badge&logo=fastapi)](https://github.com/MohdAsad2903/DeepFold-miRNA#running-backend--frontend)
+[![Next.js Frontend](https://img.shields.io/badge/Frontend-Next.js_14-000000?style=for-the-badge&logo=next.js)](https://github.com/MohdAsad2903/DeepFold-miRNA#running-backend--frontend)
 
 > A multi-modal stacked ensemble platform combining 2D Convolutional Neural Networks, Siamese Graph Convolutional Networks, k-mer Frequency XGBoost, Thermodynamic MFE XGBoost, and Evolutionary Pattern Model XGBoost for predicting pre-miRNA single nucleotide polymorphism (SNP) pathogenicity.
 
 ---
 
-## 📋 Table of Contents
-- [Overview & Biological Context](#-overview--biological-context)
-- [Scientific Performance & Benchmarks](#-scientific-performance--benchmarks)
-- [Multi-Modal Ensemble Architecture](#-multi-modal-ensemble-architecture)
-- [Technology Stack](#-technology-stack)
-- [Core Features](#-core-features)
-- [Project Directory Structure](#-project-directory-structure)
-- [Getting Started & Installation](#-getting-started--installation)
-- [Running Backend & Frontend](#-running-backend--frontend)
-- [API Documentation](#-api-documentation)
-- [Presentation Visualizations](#-presentation-visualizations)
-- [License & Acknowledgements](#-license--acknowledgements)
+## Table of Contents
+- [Overview & Biological Context](#overview--biological-context)
+- [Scientific Performance & Benchmarks](#scientific-performance--benchmarks)
+- [Multi-Modal Ensemble Architecture](#multi-modal-ensemble-architecture)
+- [Technology Stack](#technology-stack)
+- [Core Features](#core-features)
+- [Project Directory Structure](#project-directory-structure)
+- [Getting Started & Installation](#getting-started--installation)
+- [Running Backend & Frontend](#running-backend--frontend)
+- [API Documentation](#api-documentation)
+- [Presentation Visualizations](#presentation-visualizations)
+- [License & Acknowledgements](#license--acknowledgements)
 
 ---
 
-## 📌 Overview & Biological Context
+## Overview & Biological Context
 
 MicroRNAs (miRNAs) are short non-coding RNAs (~22 nucleotides) that post-transcriptionally regulate up to **60% of human protein-coding genes**. Single Nucleotide Polymorphisms (SNPs) occurring within precursor miRNA (pre-miRNA) hairpin structures can drastically disrupt secondary folding, destabilize base-pairing, alter Drosha/Dicer cleavage recognition sites, and dysregulate mature miRNA expression.
 
@@ -38,7 +39,7 @@ Traditional single-input or alignment-based predictors fail to capture the compl
 
 ---
 
-## 📊 Scientific Performance & Benchmarks
+## Scientific Performance & Benchmarks
 
 DeepFold was evaluated using a strict **StratifiedGroupKFold** strategy (grouped by miRNA prefix family) to prevent sequence homology leakage between train and validation splits.
 
@@ -55,7 +56,7 @@ DeepFold was evaluated using a strict **StratifiedGroupKFold** strategy (grouped
 
 ---
 
-## 🏗️ Multi-Modal Ensemble Architecture
+## Multi-Modal Ensemble Architecture
 
 ```mermaid
 graph TD
@@ -105,7 +106,7 @@ graph TD
 
 ---
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 | Layer | Component | Technologies Used |
 | :--- | :--- | :--- |
@@ -119,7 +120,7 @@ graph TD
 
 ---
 
-## ✨ Core Features
+## Core Features
 
 ### 1. Interactive Diagnostic Predictor
 - **3-Step Workflow**: Sequence Input & SNP Detection $\rightarrow$ Structural Verification $\rightarrow$ Ensemble Execution.
@@ -145,7 +146,7 @@ graph TD
 
 ---
 
-## 📂 Project Directory Structure
+## Project Directory Structure
 
 ```bash
 DeepFold-miRNA/
@@ -178,7 +179,7 @@ DeepFold-miRNA/
 
 ---
 
-## 🏁 Getting Started & Installation
+## Getting Started & Installation
 
 ### Prerequisites
 - **Python**: `3.10` or higher
@@ -217,7 +218,7 @@ npm install --legacy-peer-deps
 
 ---
 
-## 🏃 Running Backend & Frontend
+## Running Backend & Frontend
 
 ### Step 1: Launch Backend API
 ```bash
@@ -236,7 +237,7 @@ npm run dev
 
 ---
 
-## 📡 API Documentation
+## API Documentation
 
 | Endpoint | Method | Description | Rate Limit |
 | :--- | :--- | :--- | :--- |
@@ -250,26 +251,26 @@ npm run dev
 
 ---
 
-## 🖼️ Presentation Visualizations
+## Presentation Visualizations
 
 The project includes 12 presentation-ready graphics generated directly from trained model artifacts, located in [`presentation_graphs/`](presentation_graphs/):
 
-- `01_model_comparison.png` — Base model vs Meta-Learner AUC comparison
-- `02_roc_curves.png` — 5-Fold Cross-Validation ROC curves
-- `03_pr_curves.png` — Precision-Recall curves across fold splits
-- `04_shap_importance.png` — Global SHAP feature importance breakdown
-- `05_calibration_curves.png` — Probability reliability calibration plots
-- `06_confusion_matrix.png` — Confusion matrix on validation sets
-- `07_snp_position_distribution.png` — Spatial mutation distribution across pre-miRNA hairpins
-- `08_dataset_summary.png` — COSMIC vs gnomAD dataset distribution
-- `09_family_performance.png` — Predictive performance grouped by miRNA family
-- `10_mfe_analysis.png` — Thermodynamic stability change ($\Delta\text{MFE}$) distributions
-- `11_clinvar_validation.png` — Benchmark evaluation on ClinVar variants
-- `12_ensemble_weights.png` — Stacking meta-learner component weight breakdown
+- [`01_model_comparison.png`](presentation_graphs/01_model_comparison.png) — Base model vs Meta-Learner AUC comparison
+- [`02_roc_curves.png`](presentation_graphs/02_roc_curves.png) — 5-Fold Cross-Validation ROC curves
+- [`03_pr_curves.png`](presentation_graphs/03_pr_curves.png) — Precision-Recall curves across fold splits
+- [`04_shap_importance.png`](presentation_graphs/04_shap_importance.png) — Global SHAP feature importance breakdown
+- [`05_calibration_curves.png`](presentation_graphs/05_calibration_curves.png) — Probability reliability calibration plots
+- [`06_confusion_matrix.png`](presentation_graphs/06_confusion_matrix.png) — Confusion matrix on validation sets
+- [`07_snp_position_distribution.png`](presentation_graphs/07_snp_position_distribution.png) — Spatial mutation distribution across pre-miRNA hairpins
+- [`08_dataset_summary.png`](presentation_graphs/08_dataset_summary.png) — COSMIC vs gnomAD dataset distribution
+- [`09_family_performance.png`](presentation_graphs/09_family_performance.png) — Predictive performance grouped by miRNA family
+- [`10_mfe_analysis.png`](presentation_graphs/10_mfe_analysis.png) — Thermodynamic stability change ($\Delta\text{MFE}$) distributions
+- [`11_clinvar_validation.png`](presentation_graphs/11_clinvar_validation.png) — Benchmark evaluation on ClinVar variants
+- [`12_ensemble_weights.png`](presentation_graphs/12_ensemble_weights.png) — Stacking meta-learner component weight breakdown
 
 ---
 
-## 📄 License & Acknowledgements
+## License & Acknowledgements
 
 Developed as a Capstone Project on miRNA SNP Pathogenicity Diagnosis.
 
