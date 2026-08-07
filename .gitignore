@@ -1,0 +1,42 @@
+# Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+
+# Node modules & frontend builds
+node_modules/
+.next/
+dist/
+build/
+out/
+tsconfig.tsbuildinfo
+
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Environment variables & secrets
+.env
+.env.*
+*.key
+*.pem
+credentials.json
+
+# IDE & OS Metadata
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+
+# Large / Temporary extraction archives
+archive.adding
+extracted.txt
+tmp_sq.json
+archive/
+DeepFold_Dataset_Extracted/
